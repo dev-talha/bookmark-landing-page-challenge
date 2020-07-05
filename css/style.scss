@@ -1,0 +1,311 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/****** Global Styles ******/
+:root {
+  // Primary Colors
+  --clr-soft-blue: hsl(231, 69%, 60%);
+  --clr-soft-red: hsl(0, 94%, 66%);
+  // Neutral Colors
+  --clr-grayish-blue: hsl(229, 8%, 60%);
+  --clr-grayish: hsl(0, 0%, 95%);
+  --clr-dark-blue: hsl(229, 31%, 21%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --base-font-size: 18px;
+
+  --font-Rubik: "Rubik", sans-serif;
+
+  --shadow: 0px 5px 5px 4px hsla(237, 85%, 94%, 0.6);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-Rubik);
+  font-size: var(--base-font-size);
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--clr-dark-blue);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  margin: 30px 0px;
+  color: var(--clr-grayish-blue);
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+button {
+  font-family: var(--font-Rubik);
+  font-size: var(--base-font-size);
+  border: none;
+  outline: none;
+  background: none;
+}
+.wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  max-width: 1120px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.container-mini {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+//****** Utilities ******//
+.bg_red {
+  background-color: var(--clr-soft-red);
+  color: var(--clr-white);
+}
+.bg_soft-blue {
+  background-color: var(--clr-soft-blue);
+  color: var(--clr-white);
+}
+.bg_grayish {
+  background-color: var(--clr-grayish);
+  color: var(--clr-dark-blue);
+  box-shadow: var(--shadow);
+}
+.btn-filled {
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.mr-xs {
+  margin-right: 15px;
+}
+
+.push-1x {
+  transform: translateY(3rem);
+}
+.push-2x {
+  transform: translateY(6rem);
+}
+/* Header Section */
+header {
+  margin: 30px 0px;
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+    .nav-items {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .nav-item {
+      text-transform: uppercase;
+    }
+    .btn-filled {
+      padding: 15px 40px;
+    }
+  }
+}
+/* Hero Section */
+#hero {
+  .hero_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero_texts {
+    text-align: left;
+    width: 50%;
+    margin-right: 3rem;
+  }
+  .hero-img {
+    margin-right: -5rem;
+  }
+}
+
+/* Features Section */
+#features {
+  /* Style the tab */
+  .tab {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-bottom: 1px solid var(--clr-grayish);
+    /* Style the buttons that are used to open the tab content */
+    button {
+      cursor: pointer;
+      padding: 20px 30px;
+      transition: 0.3s;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        border-bottom: 3px solid var(--clr-soft-red);
+        transition: width 0.3s ease-out;
+      }
+      &:hover::after,
+      &.active::after {
+        width: 100%;
+      }
+    }
+  }
+  /* Style the tab content */
+  .tabcontent {
+    margin-top: 4rem;
+    display: none;
+    padding: 6px 12px;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    /* Go from zero to full opacity */
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .tabcontent_text,
+    .tabcontent_img {
+      width: 50%;
+    }
+    .tabcontent_text {
+      text-align: left;
+      margin-left: 10rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+/* Extension Section */
+#extension {
+  --space: 2.5rem;
+  .cards {
+    margin-left: calc(var(--space) / 2 * -1);
+    margin-right: calc(var(--space) / 2 * -1);
+  }
+  .card {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: inline-block;
+    box-shadow: var(--shadow);
+    margin-left: calc(var(--space) / 2);
+    margin-right: calc(var(--space) / 2);
+    padding: 1.5rem;
+    border-radius: 10px;
+    &_img {
+      padding: 2rem 0;
+    }
+    &_contents {
+      p {
+        margin-top: 1rem;
+      }
+    }
+    &_cta {
+      padding-top: 2rem;
+    }
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(./../images/bg-dots.svg);
+      height: 3px;
+      width: 100%;
+      left: 0;
+      bottom: 6.5rem;
+    }
+  }
+}
+/* FAQ Section */
+#faq {
+  .accordion {
+    margin: 60px auto;
+    /* Style the buttons that are used to open and close the accordion panel */
+    &_title {
+      border-top: 1px solid var(--clr-grayish);
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      transition: 0.4s;
+      position: relative;
+      &:last-of-type {
+        border-bottom: 2px solid var(--clr-grayish);
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      &:hover {
+        color: var(--clr-soft-red);
+      }
+      &.active {
+        .accordion_arrow {
+          transform: rotate(180deg);
+          path {
+            stroke: var(--clr-soft-red);
+          }
+        }
+      }
+    }
+    /* Style the accordion panel. Note: hidden by default */
+    &_panel {
+      text-align: left;
+      padding: 0 18px;
+      background-color: white;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.2s ease-out;
+    }
+    &_arrow {
+      transition: all 0.1s ease-out;
+      position: absolute;
+      right: 0;
+      path {
+        stroke: var(--clr-soft-blue);
+      }
+    }
+  }
+}

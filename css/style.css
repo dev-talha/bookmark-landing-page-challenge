@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/****** Global Styles ******/
+:root {
+  --clr-soft-blue: hsl(231, 69%, 60%);
+  --clr-soft-red: hsl(0, 94%, 66%);
+  --clr-grayish-blue: hsl(229, 8%, 60%);
+  --clr-grayish: hsl(0, 0%, 95%);
+  --clr-dark-blue: hsl(229, 31%, 21%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --base-font-size: 18px;
+  --font-Rubik: "Rubik", sans-serif;
+  --shadow: 0px 5px 5px 4px hsla(237, 85%, 94%, 0.6); }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-Rubik);
+  font-size: var(--base-font-size); }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit; }
+
+li {
+  list-style: none; }
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--clr-dark-blue);
+  font-weight: 500;
+  text-transform: capitalize; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2rem; }
+
+p {
+  margin: 30px 0px;
+  color: var(--clr-grayish-blue); }
+
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+button {
+  font-family: var(--font-Rubik);
+  font-size: var(--base-font-size);
+  border: none;
+  outline: none;
+  background: none; }
+
+.wrapper {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.container {
+  max-width: 1120px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.container-mini {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto; }
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.bg_red {
+  background-color: var(--clr-soft-red);
+  color: var(--clr-white); }
+
+.bg_soft-blue {
+  background-color: var(--clr-soft-blue);
+  color: var(--clr-white); }
+
+.bg_grayish {
+  background-color: var(--clr-grayish);
+  color: var(--clr-dark-blue);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow); }
+
+.btn-filled {
+  padding: 15px 30px;
+  border-radius: 5px; }
+
+.mr-xs {
+  margin-right: 15px; }
+
+.push-1x {
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem); }
+
+.push-2x {
+  -webkit-transform: translateY(6rem);
+          transform: translateY(6rem); }
+
+/* Header Section */
+header {
+  margin: 30px 0px; }
+  header .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    header .navigation .nav-links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    header .navigation .nav-items {
+      padding-left: 20px;
+      padding-right: 20px; }
+    header .navigation .nav-item {
+      text-transform: uppercase; }
+    header .navigation .btn-filled {
+      padding: 15px 40px; }
+
+/* Hero Section */
+#hero .hero_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#hero .hero_texts {
+  text-align: left;
+  width: 50%;
+  margin-right: 3rem; }
+
+#hero .hero-img {
+  margin-right: -5rem; }
+
+/* Features Section */
+#features {
+  /* Style the tab */
+  /* Style the tab content */ }
+  #features .tab {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-bottom: 1px solid var(--clr-grayish);
+    /* Style the buttons that are used to open the tab content */ }
+    #features .tab button {
+      cursor: pointer;
+      padding: 20px 30px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      position: relative; }
+      #features .tab button::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        border-bottom: 3px solid var(--clr-soft-red);
+        -webkit-transition: width 0.3s ease-out;
+        transition: width 0.3s ease-out; }
+      #features .tab button:hover::after, #features .tab button.active::after {
+        width: 100%; }
+  #features .tabcontent {
+    margin-top: 4rem;
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s;
+    /* Fading effect takes 1 second */
+    /* Go from zero to full opacity */ }
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+    #features .tabcontent .tabcontent_text,
+    #features .tabcontent .tabcontent_img {
+      width: 50%; }
+    #features .tabcontent .tabcontent_text {
+      text-align: left;
+      margin-left: 10rem;
+      margin-top: auto;
+      margin-bottom: auto; }
+
+/* Extension Section */
+#extension {
+  --space: 2.5rem; }
+  #extension .cards {
+    margin-left: calc(var(--space) / 2 * -1);
+    margin-right: calc(var(--space) / 2 * -1); }
+  #extension .card {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: inline-block;
+    -webkit-box-shadow: var(--shadow);
+            box-shadow: var(--shadow);
+    margin-left: calc(var(--space) / 2);
+    margin-right: calc(var(--space) / 2);
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: relative; }
+    #extension .card_img {
+      padding: 2rem 0; }
+    #extension .card_contents p {
+      margin-top: 1rem; }
+    #extension .card_cta {
+      padding-top: 2rem; }
+    #extension .card::before {
+      position: absolute;
+      content: "";
+      background: url(./../images/bg-dots.svg);
+      height: 3px;
+      width: 100%;
+      left: 0;
+      bottom: 6.5rem; }
+
+/* FAQ Section */
+#faq .accordion {
+  margin: 60px auto;
+  /* Style the buttons that are used to open and close the accordion panel */
+  /* Style the accordion panel. Note: hidden by default */ }
+  #faq .accordion_title {
+    border-top: 1px solid var(--clr-grayish);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    position: relative;
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */ }
+    #faq .accordion_title:last-of-type {
+      border-bottom: 2px solid var(--clr-grayish); }
+    #faq .accordion_title:hover {
+      color: var(--clr-soft-red); }
+    #faq .accordion_title.active .accordion_arrow {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+      #faq .accordion_title.active .accordion_arrow path {
+        stroke: var(--clr-soft-red); }
+  #faq .accordion_panel {
+    text-align: left;
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out; }
+  #faq .accordion_arrow {
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+    position: absolute;
+    right: 0; }
+    #faq .accordion_arrow path {
+      stroke: var(--clr-soft-blue); }
+/*# sourceMappingURL=style.css.map */
