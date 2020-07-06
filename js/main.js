@@ -5,7 +5,8 @@ const tabcontent = document.querySelectorAll(".tabcontent");
 const tablinks = document.querySelectorAll(".tablinks");
 const accordion = document.querySelectorAll(".accordion_title");
 const mobile_menu = document.querySelector(".mobile-menu");
-const navMenu = document.querySelector(".navigation");
+const mobile_menu_close = document.querySelector(".mobile-menu-close");
+const body = document.querySelector("body");
 
 window.onload = () => {
   document.getElementById("defaultOpen").click();
@@ -33,7 +34,10 @@ window.onload = () => {
     Mobile menu Action
   -----------------*/
   mobile_menu.addEventListener("click", (e) => {
-    navMenu.classList.toggle("open");
+    body.classList.add("nav-open");
+  });
+  mobile_menu_close.addEventListener("click", (e) => {
+    body.classList.remove("nav-open");
   });
 };
 
