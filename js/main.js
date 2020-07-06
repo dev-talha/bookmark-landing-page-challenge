@@ -4,6 +4,8 @@
 const tabcontent = document.querySelectorAll(".tabcontent");
 const tablinks = document.querySelectorAll(".tablinks");
 const accordion = document.querySelectorAll(".accordion_title");
+const mobile_menu = document.querySelector(".mobile-menu");
+const navMenu = document.querySelector(".navigation");
 
 window.onload = () => {
   document.getElementById("defaultOpen").click();
@@ -25,6 +27,13 @@ window.onload = () => {
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
     });
+  });
+
+  /*---------------
+    Mobile menu Action
+  -----------------*/
+  mobile_menu.addEventListener("click", (e) => {
+    navMenu.classList.toggle("open");
   });
 };
 

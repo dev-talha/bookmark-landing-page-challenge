@@ -57,12 +57,21 @@ h4 {
 }
 h1 {
   font-size: 3rem;
+  @media screen and #{$tablet} {
+    font-size: 2.5rem;
+  }
 }
 h2 {
   font-size: 2.5rem;
+  @media screen and #{$tablet} {
+    font-size: 2rem;
+  }
 }
 h3 {
   font-size: 2rem;
+  @media screen and #{$tablet} {
+    font-size: 1.5rem;
+  }
 }
 p {
   margin: 30px 0px;
@@ -122,6 +131,10 @@ section {
 
 .mr-xs {
   margin-right: 15px;
+  @media screen and #{$phone} {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 }
 
 .push-0x {
@@ -157,6 +170,12 @@ header {
     .nav-item {
       text-transform: uppercase;
     }
+    .mobile-menu {
+      display: none;
+      @media screen and #{$tablet} {
+        display: block;
+      }
+    }
     .btn-filled {
       padding: 15px 40px;
     }
@@ -184,11 +203,13 @@ header {
     }
   }
   .hero-img {
-    width: 50%;
-    margin-right: -5rem;
+    width: 45%;
     @media screen and #{$desktop} {
       width: 100%;
       margin-right: 0;
+    }
+    @media screen and #{$desktop-xl} {
+      margin-right: -5rem;
     }
   }
 }
@@ -207,9 +228,13 @@ header {
     /* Style the buttons that are used to open the tab content */
     button {
       cursor: pointer;
-      padding: 20px 30px;
       transition: 0.3s;
       position: relative;
+      padding: 20px 30px;
+      @media screen and #{$tablet} {
+        padding: 20px 10px;
+        margin: auto 20px;
+      }
       &::after {
         position: absolute;
         content: "";
@@ -371,21 +396,35 @@ header {
     text-transform: uppercase;
     margin: 0;
   }
-  h2 {
+  h3 {
     color: var(--clr-white);
     margin: 50px auto;
   }
 
   input {
-    padding: 15px 70px 15px 25px;
+    display: inline-block;
+    height: 3.2rem;
+    padding: 1rem 5rem 1rem 2rem;
+    margin-right: 15px;
     border: none;
     border-radius: var(--border-radius);
     font-family: var(--font-Rubik);
     font-size: var(--base-font-size);
     color: var(--clr-grayish);
+    @media screen and #{$phone} {
+      margin-right: 0;
+      padding: 0 0 0 1.5rem;
+      width: 100%;
+    }
   }
-  button {
+  button[type="submit"] {
     text-transform: capitalize;
+    @media screen and #{$phone} {
+      margin-top: 1rem;
+      display: inline-block;
+      height: 3.2rem;
+      width: 100%;
+    }
   }
 }
 
@@ -395,7 +434,8 @@ header {
   background-color: var(--clr-dark-blue);
   &_wrapper {
     @media screen and #{$tablet} {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      padding: 2rem 0;
     }
     display: flex;
     align-items: center;
@@ -419,10 +459,16 @@ header {
   }
   ul {
     margin-left: 2rem;
+    @media screen and #{$tablet} {
+      margin-left: 0;
+    }
   }
   li a {
-    margin: 15px 20px;
+    margin: 30px 20px;
     text-transform: uppercase;
     color: var(--clr-white);
+    @media screen and #{$tablet} {
+      display: block;
+    }
   }
 }
