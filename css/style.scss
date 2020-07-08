@@ -200,22 +200,33 @@ header {
   }
   .hero_texts {
     text-align: left;
-    margin-right: 3rem;
     width: 50%;
     @media screen and #{$desktop} {
       width: 100%;
       text-align: center;
-      margin-right: 0;
     }
   }
   .hero-img {
-    width: 45%;
+    width: 50%;
     @media screen and #{$desktop} {
       width: 100%;
       margin-right: 0;
     }
     @media screen and #{$desktop-xl} {
       margin-right: -5rem;
+    }
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 80%;
+      width: 90%;
+      background: var(--clr-soft-blue);
+      z-index: -1;
+      right: -10%;
+      bottom: 0%;
+      border-top-left-radius: 40%;
+      border-bottom-left-radius: 40%;
     }
   }
 }
@@ -296,6 +307,21 @@ header {
         padding-left: 0;
         text-align: center;
         margin-top: 3rem;
+      }
+    }
+    .tabcontent_img {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: var(--clr-soft-blue);
+        z-index: -1;
+        left: -20%;
+        bottom: -20%;
+        border-top-right-radius: 40%;
+        border-bottom-right-radius: 40%;
       }
     }
   }
@@ -397,6 +423,9 @@ header {
 
 /* Newsletter Section */
 #newsletter {
+  .form {
+    position: relative;
+  }
   p {
     color: var(--clr-white);
     text-transform: uppercase;
@@ -416,15 +445,20 @@ header {
     border-radius: var(--border-radius);
     font-family: var(--font-Rubik);
     font-size: var(--base-font-size);
-    color: var(--clr-grayish);
+    color: var(--clr-dark-blue);
     @media screen and #{$phone} {
       margin-right: 0;
       padding: 0 0 0 1.5rem;
       width: 100%;
     }
   }
+  .input-helper {
+    display: block;
+    position: absolute;
+  }
   button[type="submit"] {
     text-transform: capitalize;
+    cursor: pointer;
     @media screen and #{$phone} {
       margin-top: 1rem;
       display: inline-block;

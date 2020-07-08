@@ -199,16 +199,15 @@ header {
 
 #hero .hero_texts {
   text-align: left;
-  margin-right: 3rem;
   width: 50%; }
   @media screen and (max-width: 1024px) {
     #hero .hero_texts {
       width: 100%;
-      text-align: center;
-      margin-right: 0; } }
+      text-align: center; } }
 
 #hero .hero-img {
-  width: 45%; }
+  width: 50%;
+  position: relative; }
   @media screen and (max-width: 1024px) {
     #hero .hero-img {
       width: 100%;
@@ -216,6 +215,17 @@ header {
   @media screen and (min-width: 1440px) {
     #hero .hero-img {
       margin-right: -5rem; } }
+  #hero .hero-img::after {
+    position: absolute;
+    content: "";
+    height: 80%;
+    width: 90%;
+    background: var(--clr-soft-blue);
+    z-index: -1;
+    right: -10%;
+    bottom: 0%;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%; }
 
 /* Features Section */
 #features {
@@ -300,6 +310,19 @@ header {
           padding-left: 0;
           text-align: center;
           margin-top: 3rem; } }
+    #features .tabcontent .tabcontent_img {
+      position: relative; }
+      #features .tabcontent .tabcontent_img::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: var(--clr-soft-blue);
+        z-index: -1;
+        left: -20%;
+        bottom: -20%;
+        border-top-right-radius: 40%;
+        border-bottom-right-radius: 40%; }
 
 /* Extension Section */
 #extension {
@@ -379,6 +402,9 @@ header {
       stroke: var(--clr-soft-blue); }
 
 /* Newsletter Section */
+#newsletter .form {
+  position: relative; }
+
 #newsletter p {
   color: var(--clr-white);
   text-transform: uppercase;
@@ -397,15 +423,20 @@ header {
   border-radius: var(--border-radius);
   font-family: var(--font-Rubik);
   font-size: var(--base-font-size);
-  color: var(--clr-grayish); }
+  color: var(--clr-dark-blue); }
   @media screen and (max-width: 576px) {
     #newsletter input {
       margin-right: 0;
       padding: 0 0 0 1.5rem;
       width: 100%; } }
 
+#newsletter .input-helper {
+  display: block;
+  position: absolute; }
+
 #newsletter button[type="submit"] {
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  cursor: pointer; }
   @media screen and (max-width: 576px) {
     #newsletter button[type="submit"] {
       margin-top: 1rem;

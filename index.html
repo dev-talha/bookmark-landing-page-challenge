@@ -35,7 +35,7 @@
       <header>
         <div class="container">
           <nav class="navigation">
-            <a href="#" class="brand">
+            <a href="/" class="brand">
               <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fill-rule="evenodd">
                   <path
@@ -55,7 +55,7 @@
             </a>
             <ul class="nav-links">
               <li class="nav-items">
-                <a href="#" class="nav-item">Features</a>
+                <a href="#features" class="nav-item">Features</a>
               </li>
               <li class="nav-items">
                 <a href="#" class="nav-item">Pricing</a>
@@ -362,18 +362,22 @@
           <p>35,000+ already joined</p>
           <h3>Stay up-to-date with what we’re doing</h3>
           <form action="#" method="POST" class="form">
-            <input type="email" placeholder="Enter your email address" />
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              name="email"
+            />
             <button type="submit" class="btn-filled bg_red">contact us</button>
           </form>
         </div>
       </section>
 
       <!-- Footer Section -->
-      <section class="footer">
+      <footer class="footer" id="footer">
         <div class="container">
           <div class="footer_wrapper">
             <div class="footer_left">
-              <a href="#" class="brand">
+              <a href="/" class="brand">
                 <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fill-rule="evenodd">
                     <path
@@ -393,14 +397,14 @@
               </a>
               <ul>
                 <li>
-                  <a href="#">Features</a>
+                  <a href="#features">Features</a>
                   <a href="#">Pricing</a>
                   <a href="#">contact</a>
                 </li>
               </ul>
             </div>
             <div class="footer_social">
-              <a href="#">
+              <a href="https://facebook.com">
                 <span class="icon-fb">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -415,8 +419,8 @@
                   </svg>
                 </span>
               </a>
-              <a href="#">
-                <span class="icon-fb">
+              <a href="https://twitter.com">
+                <span class="icon-twitter">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -433,17 +437,17 @@
             </div>
           </div>
         </div>
-      </section>
+      </footer>
     </div>
 
-    <footer>
+    <div>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">MD Riaz</a>.
       </p>
-    </footer>
+    </div>
 
     <script src="./js/main.js"></script>
   </body>
