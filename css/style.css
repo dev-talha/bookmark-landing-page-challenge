@@ -402,9 +402,6 @@ header {
       stroke: var(--clr-soft-blue); }
 
 /* Newsletter Section */
-#newsletter .form {
-  position: relative; }
-
 #newsletter p {
   color: var(--clr-white);
   text-transform: uppercase;
@@ -429,10 +426,6 @@ header {
       margin-right: 0;
       padding: 0 0 0 1.5rem;
       width: 100%; } }
-
-#newsletter .input-helper {
-  display: block;
-  position: absolute; }
 
 #newsletter button[type="submit"] {
   text-transform: capitalize;

@@ -423,9 +423,6 @@ header {
 
 /* Newsletter Section */
 #newsletter {
-  .form {
-    position: relative;
-  }
   p {
     color: var(--clr-white);
     text-transform: uppercase;
@@ -451,10 +448,6 @@ header {
       padding: 0 0 0 1.5rem;
       width: 100%;
     }
-  }
-  .input-helper {
-    display: block;
-    position: absolute;
   }
   button[type="submit"] {
     text-transform: capitalize;
